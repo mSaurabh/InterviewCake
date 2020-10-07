@@ -185,6 +185,7 @@ namespace InterviewCake
                            "☹ + ☕ = ☺";
             //"mankar.saurabh@gmail.com epjmorgan@gmail.com ndsheetal@gmail.com";
             foreach (var item in Algorithms.WordCloud(input))
+
             {
                 System.Console.WriteLine("Word = {0}  Frequency = {1}", item.Key, item.Value);
             }

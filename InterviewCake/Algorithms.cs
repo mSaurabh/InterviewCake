@@ -467,6 +467,7 @@ namespace InterviewCake
                 {
                     //System.Console.WriteLine("Incrementing word length for '{0}'", charArray[i]);
                     wordLength++;
+
                 }
 
                 switch (charArray[i])
