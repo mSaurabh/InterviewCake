@@ -19,7 +19,6 @@ namespace InterviewCake
             EndTime = endTime;
         }
 
-
         public override string ToString()
         {
             return $"({StartTime}, {EndTime})";
