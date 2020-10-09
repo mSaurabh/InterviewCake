@@ -178,11 +178,11 @@ namespace InterviewCake
             #endregion
 
             #region Word-Cloud 
-            System.Console.WriteLine();
+            /*System.Console.WriteLine();
             string input = //"Cliff finished his cake and paid the bill.";
-                           //"We came, we saw, we conquered...then we ate Bill's (Mille-Feuille) cake.";
-                           //   "We came, we saw, we ate cake.Friends, Romans, countrymen! Let us eat cake.New tourists in New York often wait in long lines for cronuts.";
-                           "☹ + ☕ = ☺";
+                           "We came, we saw, we conquered...then we ate Bill's (Mille-Feuille) cake.";
+                           //"We came, we saw, we ate cake.Friends, Romans, countrymen! Let us eat cake.New tourists in New York often wait in long lines for cronuts.";
+                           //"I'm singing ♬ on a ☔ day";
             //"mankar.saurabh@gmail.com epjmorgan@gmail.com ndsheetal@gmail.com";
             foreach (var item in Algorithms.WordCloud(input))
             {
@@ -190,8 +190,22 @@ namespace InterviewCake
             }
 
             System.Console.ReadKey();
+            */
+            #endregion
+
+            #region Highest Score Sorted Array O(n) time O(n) space
+            System.Console.WriteLine();
+            int[] unsortedScores = new[] { 37, 89, 41, 65, 91, 53 };
+            const int HighestPossibleScore = 100;
+
+            int[] sortedScores = Algorithms.SortScores(unsortedScores, HighestPossibleScore);
+
+            PrintDataStructures.PrintIntArrays(sortedScores);
+
+            System.Console.ReadKey();
 
             #endregion
+
         }
     }
 }

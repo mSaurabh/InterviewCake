@@ -441,9 +441,9 @@ namespace InterviewCake
             // has one or zero characters without a pair
             return unpairedCharacters.Count <= 1;
         }
-        #endregion  
+        #endregion
 
-
+        #region Word Cloud Space O(n) Time O(n) Key String to Char array and read one at a time
         public static Dictionary<string,int> WordCloud(string longString)
         {
             Dictionary<string, int> wordCloud = new Dictionary<string, int>();
@@ -539,6 +539,36 @@ namespace InterviewCake
 
             return wordCloud;
         }
+        #endregion
 
+
+        #region Sort Scores based on Hisgest possible score
+        public static int[] SortScores(int[] unsortedScores, int highestPossibleScore)
+        {
+            int[] scoreCounts = new int[highestPossibleScore+1];
+
+            foreach (var item in unsortedScores)
+            {
+
+                scoreCounts[item] += 1;
+            }
+
+            int[] sortedScores = new int[unsortedScores.Length];
+            int currentPosition = 0;
+
+            for (int score = highestPossibleScore; score >= 0; score--)
+            {
+                int count = scoreCounts[score];
+
+                for (int j = 0; j < count; j++)
+                {
+                    sortedScores[currentPosition] = score;
+                    currentPosition++;
+                }
+            }
+            return sortedScores;
+        }
+
+        #endregion
     }
 }
